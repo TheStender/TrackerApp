@@ -107,7 +107,7 @@ function App() {
 
   return (
     <div className="App" style={{backgroundColor: '#191919', color: 'white'}}>
-      <h1>Stender's Mileage Tracker</h1>
+      <h1>Stender's Biking Tracker</h1>
       <h3>{date}</h3>
       <h4>{ (parseFloat(distances.roadDistance) + parseFloat(distances.eDistance) + parseFloat(distances.virtualDistance)).toFixed(2) } Total Miles</h4>
       <div className="container-fluid">
