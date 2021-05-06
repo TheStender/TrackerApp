@@ -4,10 +4,7 @@ import Biking from './BikingComponent';
 import LineChart from './LineChart';
 import YearlyMileage from './YearlyMileage';
 
-
-
-
-function App() {
+function App(props) {
 
   const [isLoading, setIsLoading] = useState(true)
   const [activities, setActivities] = useState({})
@@ -18,10 +15,13 @@ function App() {
   const [februaryDistance, setFebruaryDistance] = useState(0);
   const [marchDistance, setMarchDistance] = useState(0);
   const [aprilDistance, setAprilDistance] = useState(0);
+  const [mayDistance, setMayDistance] = useState(0);
 
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
   const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const REACT_APP_REFRESH_TOKEN = process.env.REACT_APP_REFRESH_TOKEN;
+
+
 
   let today = new Date();
   let month = today.toLocaleString('default', {month: 'long'});
@@ -69,6 +69,7 @@ function App() {
           setFebruaryDistance(getMonthlyActivities(data, '2021-02'));
           setMarchDistance(getMonthlyActivities(data, '2021-03'));
           setAprilDistance(getMonthlyActivities(data, '2021-04'));
+          setMayDistance(getMonthlyActivities(data, '2021-05'));
         }
       )
       .catch(e => console.log(e))
@@ -92,7 +93,8 @@ function App() {
     januaryDistance: januaryDistance,
     februaryDistance: februaryDistance,
     marchDistance: marchDistance,
-    aprilDistance: aprilDistance
+    aprilDistance: aprilDistance,
+    mayDistance: mayDistance
   }
 
   const getMonthlyActivities = (activities, month) => {
