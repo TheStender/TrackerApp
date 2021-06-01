@@ -64,7 +64,7 @@ function LineChart(props){
       },
       {
         label: '2021',
-        data: [props.distances.januaryDistance, props.distances.februaryDistance, props.distances.marchDistance, props.distances.aprilDistance, props.distances.mayDistance],
+        data: [props.distances.januaryDistance, props.distances.februaryDistance, props.distances.marchDistance, props.distances.aprilDistance, props.distances.mayDistance, props.distances.juneDistance],
         fill: false,
         backgroundColor: 'rgb(154, 245, 64)',
         borderColor: 'rgba(154, 245, 64, 0.2)',
