@@ -28,17 +28,15 @@ function CardioTemplate(props) {
         <div className="container-fluid">
           <div className="row">
             <div className="col">
-                <p>Current Mileage: { currentMileage }</p>
-                <p>Goal: { totalMileage }</p>
+                <p>Current Mileage: { currentMileage } / {totalMileage}</p>
                 <p>Mileage Remaining: { (totalMileage - currentMileage).toFixed(2) }</p>
-                <p>Percent Complete: { percentComplete }%</p>
-                <p>Average miles needed per day: {((totalMileage - currentMileage) / daysRemaining).toFixed(2) }</p>
-                <p>Average miles needed per week: { (((totalMileage - currentMileage)  / daysRemaining) * 7).toFixed(2) }</p>
+                <p>Miles needed per day: {((totalMileage - currentMileage) / daysRemaining).toFixed(2) }</p>
+                <p>Miles needed per week: { (((totalMileage - currentMileage)  / daysRemaining) * 7).toFixed(2) }</p>
+                <p>Current Average per day: { (currentMileage / daysPassed).toFixed(2) }</p>
             </div>
             <div className="col">
               <Chart percentComplete={ percentComplete }/>
-              <p>Current Average per day: { (currentMileage / daysPassed).toFixed(2) }</p>
-              <p>Estimated Date of Completion: { finalDate }</p>
+              <p>Estimated Completion: { finalDate }</p>
             </div>
           </div>
         </div>

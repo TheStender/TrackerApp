@@ -8,12 +8,12 @@ function Chart(props){
     const chartInfo = {
         labels: ['Completed', 'Remaining'],
         datasets: [{
-            label: 'Best chart',
+            label: 'Mileage Chart',
             backgroundColor: [
                 'green',
                 'red'
             ],
-            data: [props.percentComplete, 100 - props.percentComplete]
+            data: [props.percentComplete, (100 - props.percentComplete).toFixed(2)]
         }]
     }
 
