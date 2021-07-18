@@ -9,6 +9,7 @@ function LineChart(props){
   let aprilTotal = marchTotal + props.distances.aprilDistance;
   let mayTotal = aprilTotal + props.distances.mayDistance;
   let juneTotal = mayTotal + props.distances.juneDistance;
+  let julyTotal = juneTotal + props.distances.julyDistance;
 
   const data = {
     labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -71,7 +72,7 @@ function LineChart(props){
       },
       {
         label: '2021',
-        data: [januaryTotal.toFixed(2), februaryTotal.toFixed(2), marchTotal.toFixed(2), aprilTotal.toFixed(2), mayTotal.toFixed(2), juneTotal.toFixed(2)],
+        data: [januaryTotal.toFixed(2), februaryTotal.toFixed(2), marchTotal.toFixed(2), aprilTotal.toFixed(2), mayTotal.toFixed(2), juneTotal.toFixed(2), julyTotal.toFixed(2)],
         fill: false,
         backgroundColor: 'rgb(154, 245, 64)',
         borderColor: 'rgba(154, 245, 64, 0.2)',
