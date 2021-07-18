@@ -125,12 +125,12 @@ function App(props) {
         <br />
         <br />
         <div className='row'>
-          <div className='col-2'></div>
-          <div className='col-8'>
+          <div className='col-md-2 col-xs-0'></div>
+          <div className='col-md-8  col-xs-12'>
             {/* <LineChart distances={ distances } /> */}
             <YearlyMileage distances={distances} />
           </div>
-          <div className='col-2'></div>
+          <div className='col-md-2 col-xs-0'></div>
         </div>
       </div>
     </div>
