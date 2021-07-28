@@ -26,8 +26,7 @@ function App(props) {
   let month = today.toLocaleString("default", { month: "long" });
   let date = month + " " + today.getDate() + ", " + today.getFullYear();
   let epochString = 1609459200;
-  // January 1st, 2020 epocj timestamp 1577836800
-  // December 1st, 2020 epoch timestamp 1606780800
+
   // January 1st, 2021 epoch timestamp 1609459200
 
   // Strava credentials
