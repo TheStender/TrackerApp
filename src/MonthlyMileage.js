@@ -64,7 +64,7 @@ function MonthlyMileage(props){
       },
       {
         label: '2021',
-        data: [props.distances.januaryDistance, props.distances.februaryDistance, props.distances.marchDistance, props.distances.aprilDistance, props.distances.mayDistance, props.distances.juneDistance, props.distances.julyDistance],
+        data: [props.distances.januaryDistance.toFixed(2), props.distances.februaryDistance.toFixed(2), props.distances.marchDistance.toFixed(2), props.distances.aprilDistance.toFixed(2), props.distances.mayDistance.toFixed(2), props.distances.juneDistance.toFixed(2), props.distances.julyDistance.toFixed(2)],
         fill: false,
         backgroundColor: 'rgb(154, 245, 64)',
         borderColor: 'rgba(154, 245, 64, 0.2)',

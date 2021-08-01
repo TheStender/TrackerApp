@@ -118,7 +118,7 @@ function App(props) {
         <Header distances={distances} />
         <Switch>
           <Route path='/' exact><Home distances={distances} /></Route>
-          <Route path='/stats' component={Stats} />
+          <Route path='/stats'><Stats distances={distances} /></Route>
           <Route path='/routes' component={Routes} />
           <Route path='/about' component={About} />
         </Switch>
