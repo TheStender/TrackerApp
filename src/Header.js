@@ -10,11 +10,11 @@ function Header(props) {
     <div className="Header">
         <Container fluid>
           <Row>
-            <Col className='text-left'></Col>
-            <Col xs={10} className='text-center'>
+            <Col xs={0} md={{span: 1, order: 1}} className='text-left'></Col>
+            <Col xs={{span: 12, order: "first"}} md={{span: 10, order: 2}} className='text-center'>
               <h1>Stender's Biking Tracker</h1>
             </Col>
-            <Col className='text-right'>
+            <Col xs={{span: 12, order: "last"}} md={{span: 1, order: 3}} className='text-center'>
               <NavDropdown title="&#x2630;">
                 <NavDropdown.Item href='/'>Home</NavDropdown.Item>
                 <NavDropdown.Item href='/stats'>Stats</NavDropdown.Item>
@@ -23,9 +23,7 @@ function Header(props) {
                 <NavDropdown.Item href='/about'>About</NavDropdown.Item>
               </NavDropdown>
             </Col>
-          </Row>
-          <Row>
-            <Col className='text-center'>
+            <Col xs={12} md={{order: "last"}} className='text-center'>
               <h3 className='text-center'>
                 {date} -{" "}
                 {(
