@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Biking from "./BikingComponent";
-import LineChart from "./LineChart";
-import YearlyMileage from "./YearlyMileage";
+import {
+  Route,
+  BrowserRouter as Router,
+  Switch,
+} from "react-router-dom";
+
+import Home from "./Home";
+import Header from './Header';
+import Stats from "./Stats";
+import Routes from './Routes';
+import About from './About';
 
 function App(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,14 +25,12 @@ function App(props) {
   const [mayDistance, setMayDistance] = useState(0);
   const [juneDistance, setJuneDistance] = useState(0);
   const [julyDistance, setJulyDistance] = useState(0);
+  const [augustDistance, setAugustDistance] = useState(0);
 
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
   const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const REACT_APP_REFRESH_TOKEN = process.env.REACT_APP_REFRESH_TOKEN;
 
-  let today = new Date();
-  let month = today.toLocaleString("default", { month: "long" });
-  let date = month + " " + today.getDate() + ", " + today.getFullYear();
   let epochString = 1609459200;
 
   // January 1st, 2021 epoch timestamp 1609459200
@@ -68,6 +74,7 @@ function App(props) {
         setMayDistance(getMonthlyActivities(data, "2021-05"));
         setJuneDistance(getMonthlyActivities(data, "2021-06"));
         setJulyDistance(getMonthlyActivities(data, "2021-07"));
+        setAugustDistance(getMonthlyActivities(data, "2021-08"));
       })
       .catch((e) => console.log(e));
   }
@@ -93,6 +100,7 @@ function App(props) {
     mayDistance: mayDistance,
     juneDistance: juneDistance,
     julyDistance: julyDistance,
+    augustDistance: augustDistance
   };
 
   const getMonthlyActivities = (activities, month) => {
@@ -104,35 +112,17 @@ function App(props) {
     });
     return distanceTotal / 1609;
   };
-
+  
   return (
-    <div className='App' style={{ backgroundColor: "#191919", color: "white" }}>
-      <h1>Stender's Biking Tracker</h1>
-      <h3>
-        {date} -{" "}
-        {(
-          parseFloat(distances.roadDistance) +
-          parseFloat(distances.eDistance) +
-          parseFloat(distances.virtualDistance)
-        ).toFixed(2)}{" "}
-        Total Miles
-      </h3>
-      <br />
-      <div className='container-fluid'>
-        <Biking exerciseType='Biking' distances={distances} />
-        <br />
-        <br />
-        <br />
-        <div className='row'>
-          <div className='col-md-2 col-xs-0'></div>
-          <div className='col-md-8  col-xs-12'>
-            {/* <LineChart distances={ distances } /> */}
-            <YearlyMileage distances={distances} />
-          </div>
-          <div className='col-md-2 col-xs-0'></div>
-        </div>
-      </div>
-    </div>
+      <Router>
+        <Header distances={distances} />
+        <Switch>
+          <Route path='/' exact><Home distances={distances} /></Route>
+          <Route path='/stats' component={Stats} />
+          <Route path='/routes' component={Routes} />
+          <Route path='/about' component={About} />
+        </Switch>
+      </Router>
   );
 }
 

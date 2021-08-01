@@ -1,7 +1,7 @@
 import React from 'react';
 import {Line} from 'react-chartjs-2';
 
-function LineChart(props){
+function MonthlyMileage(props){
 
   const data = {
     labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -91,4 +91,4 @@ function LineChart(props){
 )
 }
 
-export default LineChart;
+export default MonthlyMileage;

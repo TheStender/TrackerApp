@@ -24,7 +24,7 @@ function CardioTemplate(props) {
   
       return (
         <div>
-        <h1>{props.CardioType}</h1>
+        <h1 className="text-center">{props.CardioType}</h1>
         <div className="container-fluid">
           <div className="row">
             <div className="col">
@@ -36,7 +36,7 @@ function CardioTemplate(props) {
             </div>
             <div className="col">
               <Chart percentComplete={ percentComplete }/>
-              <p>Estimated Completion: { finalDate }</p>
+              <p className="text-center">Estimated Completion: { finalDate }</p>
             </div>
           </div>
         </div>
