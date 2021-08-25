@@ -8,7 +8,7 @@ function Route(props) {
       <Card>
         <Card.Img variant="top" src={props.routeMap} />
         <Card.Body className="bg-dark">
-          <Card.Title>Route {props.route} - {props.mileage} miles</Card.Title>
+          <Card.Title>{props.route} - {props.mileage} miles</Card.Title>
           <Card.Text>
             <div>
               <ul>
