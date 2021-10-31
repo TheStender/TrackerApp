@@ -28,6 +28,7 @@ function App(props) {
   const [augustDistance, setAugustDistance] = useState(0);
   const [septemberDistance, setSeptemberDistance] = useState(0);
   const [octoberDistance, setOctoberDistance] = useState(0);
+  const [novemberDistance, setNovemberDistance] = useState(0);
 
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
   const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
@@ -79,6 +80,7 @@ function App(props) {
         setAugustDistance(getMonthlyActivities(data, "2021-08"));
         setSeptemberDistance(getMonthlyActivities(data, "2021-09"));
         setOctoberDistance(getMonthlyActivities(data, "2021-10"));
+        setNovemberDistance(getMonthlyActivities(data, "2021-11"));
       })
       .catch((e) => console.log(e));
   }
@@ -106,7 +108,8 @@ function App(props) {
     julyDistance: julyDistance,
     augustDistance: augustDistance,
     septemberDistance: septemberDistance,
-    octoberDistance: octoberDistance
+    octoberDistance: octoberDistance,
+    novemberDistance: novemberDistance
   };
 
   const getMonthlyActivities = (activities, month) => {

@@ -12,6 +12,7 @@ function LineChart(props) {
   let augustTotal = julyTotal + props.distances.augustDistance;
   let septemberTotal = augustTotal + props.distances.septemberDistance;
   let octoberTotal = septemberTotal + props.distances.octoberDistance;
+  let novemberTotal = octoberTotal + props.distances.novemberDistance;
 
   const data = {
     labels: [
@@ -97,7 +98,8 @@ function LineChart(props) {
           julyTotal.toFixed(2),
           augustTotal.toFixed(2),
           septemberTotal.toFixed(2),
-          octoberTotal.toFixed(2)
+          octoberTotal.toFixed(2),
+          novemberTotal.toFixed(2),
         ],
         fill: false,
         backgroundColor: "rgb(154, 245, 64)",
