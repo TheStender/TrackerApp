@@ -74,7 +74,7 @@ function Stats(props) {
             </tr>
             <tr>
               <td>December</td>
-              <td>TBD</td>
+              <td>{props.distances.decemberDistance.toFixed(2)}</td>
             </tr>
           </tbody>
         </Table>

@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import {
-  Route,
-  BrowserRouter as Router,
-  Switch,
-} from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import Home from "./Home";
-import Header from './Header';
+import Header from "./Header";
 import Stats from "./Stats";
-import Routes from './Routes';
-import About from './About';
+import Routes from "./Routes";
+import About from "./About";
 
 function App(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +25,7 @@ function App(props) {
   const [septemberDistance, setSeptemberDistance] = useState(0);
   const [octoberDistance, setOctoberDistance] = useState(0);
   const [novemberDistance, setNovemberDistance] = useState(0);
+  const [decemberDistance, setDecemberDistance] = useState(0);
 
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
   const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
@@ -81,6 +78,7 @@ function App(props) {
         setSeptemberDistance(getMonthlyActivities(data, "2021-09"));
         setOctoberDistance(getMonthlyActivities(data, "2021-10"));
         setNovemberDistance(getMonthlyActivities(data, "2021-11"));
+        setDecemberDistance(getMonthlyActivities(data, "2021-12"));
       })
       .catch((e) => console.log(e));
   }
@@ -109,7 +107,8 @@ function App(props) {
     augustDistance: augustDistance,
     septemberDistance: septemberDistance,
     octoberDistance: octoberDistance,
-    novemberDistance: novemberDistance
+    novemberDistance: novemberDistance,
+    decemberDistance: decemberDistance,
   };
 
   const getMonthlyActivities = (activities, month) => {
@@ -121,17 +120,21 @@ function App(props) {
     });
     return distanceTotal / 1609;
   };
-  
+
   return (
-      <Router>
-        <Header distances={distances} />
-        <Switch>
-          <Route path='/' exact><Home distances={distances} /></Route>
-          <Route path='/stats'><Stats distances={distances} /></Route>
-          <Route path='/routes' component={Routes} />
-          <Route path='/about' component={About} />
-        </Switch>
-      </Router>
+    <Router>
+      <Header distances={distances} />
+      <Switch>
+        <Route path='/' exact>
+          <Home distances={distances} />
+        </Route>
+        <Route path='/stats'>
+          <Stats distances={distances} />
+        </Route>
+        <Route path='/routes' component={Routes} />
+        <Route path='/about' component={About} />
+      </Switch>
+    </Router>
   );
 }
 
