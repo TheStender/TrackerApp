@@ -15,25 +15,23 @@ function App(props) {
   const [eDistance, setEDistance] = useState(0);
   const [virtualDistance, setVirtualDistance] = useState(0);
   const [januaryDistance, setJanuaryDistance] = useState(0);
-  const [februaryDistance, setFebruaryDistance] = useState(0);
-  const [marchDistance, setMarchDistance] = useState(0);
-  const [aprilDistance, setAprilDistance] = useState(0);
-  const [mayDistance, setMayDistance] = useState(0);
-  const [juneDistance, setJuneDistance] = useState(0);
-  const [julyDistance, setJulyDistance] = useState(0);
-  const [augustDistance, setAugustDistance] = useState(0);
-  const [septemberDistance, setSeptemberDistance] = useState(0);
-  const [octoberDistance, setOctoberDistance] = useState(0);
-  const [novemberDistance, setNovemberDistance] = useState(0);
-  const [decemberDistance, setDecemberDistance] = useState(0);
+  // const [februaryDistance, setFebruaryDistance] = useState(0);
+  // const [marchDistance, setMarchDistance] = useState(0);
+  // const [aprilDistance, setAprilDistance] = useState(0);
+  // const [mayDistance, setMayDistance] = useState(0);
+  // const [juneDistance, setJuneDistance] = useState(0);
+  // const [julyDistance, setJulyDistance] = useState(0);
+  // const [augustDistance, setAugustDistance] = useState(0);
+  // const [septemberDistance, setSeptemberDistance] = useState(0);
+  // const [octoberDistance, setOctoberDistance] = useState(0);
+  // const [novemberDistance, setNovemberDistance] = useState(0);
+  // const [decemberDistance, setDecemberDistance] = useState(0);
 
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
   const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const REACT_APP_REFRESH_TOKEN = process.env.REACT_APP_REFRESH_TOKEN;
 
-  let epochString = 1609459200;
-
-  // January 1st, 2021 epoch timestamp 1609459200
+  let epochString = 1640995200;
 
   // Strava credentials
   let clientID = REACT_APP_CLIENT_ID;
@@ -47,8 +45,6 @@ function App(props) {
   const callActivities = `https://www.strava.com/api/v3/athlete/activities?after=${epochString}&per_page=200&access_token=`;
 
   // Use refresh token to get current access token
-  // look into useEffect and lifecycle
-  // could you store access token and only refresh if needed? look into
   useEffect(() => {
     fetch(callRefresh, {
       method: "POST",
@@ -67,18 +63,18 @@ function App(props) {
         setRoadDistance(calculateDistance(data, "Ride"));
         setEDistance(calculateDistance(data, "EBikeRide"));
         setVirtualDistance(calculateDistance(data, "VirtualRide"));
-        setJanuaryDistance(getMonthlyActivities(data, "2021-01"));
-        setFebruaryDistance(getMonthlyActivities(data, "2021-02"));
-        setMarchDistance(getMonthlyActivities(data, "2021-03"));
-        setAprilDistance(getMonthlyActivities(data, "2021-04"));
-        setMayDistance(getMonthlyActivities(data, "2021-05"));
-        setJuneDistance(getMonthlyActivities(data, "2021-06"));
-        setJulyDistance(getMonthlyActivities(data, "2021-07"));
-        setAugustDistance(getMonthlyActivities(data, "2021-08"));
-        setSeptemberDistance(getMonthlyActivities(data, "2021-09"));
-        setOctoberDistance(getMonthlyActivities(data, "2021-10"));
-        setNovemberDistance(getMonthlyActivities(data, "2021-11"));
-        setDecemberDistance(getMonthlyActivities(data, "2021-12"));
+        setJanuaryDistance(getMonthlyActivities(data, "2022-01"));
+        // setFebruaryDistance(getMonthlyActivities(data, "2021-02"));
+        // setMarchDistance(getMonthlyActivities(data, "2021-03"));
+        // setAprilDistance(getMonthlyActivities(data, "2021-04"));
+        // setMayDistance(getMonthlyActivities(data, "2021-05"));
+        // setJuneDistance(getMonthlyActivities(data, "2021-06"));
+        // setJulyDistance(getMonthlyActivities(data, "2021-07"));
+        // setAugustDistance(getMonthlyActivities(data, "2021-08"));
+        // setSeptemberDistance(getMonthlyActivities(data, "2021-09"));
+        // setOctoberDistance(getMonthlyActivities(data, "2021-10"));
+        // setNovemberDistance(getMonthlyActivities(data, "2021-11"));
+        // setDecemberDistance(getMonthlyActivities(data, "2021-12"));
       })
       .catch((e) => console.log(e));
   }
@@ -97,18 +93,18 @@ function App(props) {
     roadDistance: roadDistance,
     eDistance: eDistance,
     virtualDistance: virtualDistance,
-    januaryDistance: januaryDistance,
-    februaryDistance: februaryDistance,
-    marchDistance: marchDistance,
-    aprilDistance: aprilDistance,
-    mayDistance: mayDistance,
-    juneDistance: juneDistance,
-    julyDistance: julyDistance,
-    augustDistance: augustDistance,
-    septemberDistance: septemberDistance,
-    octoberDistance: octoberDistance,
-    novemberDistance: novemberDistance,
-    decemberDistance: decemberDistance,
+    januaryDistance: januaryDistance
+    // februaryDistance: februaryDistance,
+    // marchDistance: marchDistance,
+    // aprilDistance: aprilDistance,
+    // mayDistance: mayDistance,
+    // juneDistance: juneDistance,
+    // julyDistance: julyDistance,
+    // augustDistance: augustDistance,
+    // septemberDistance: septemberDistance,
+    // octoberDistance: octoberDistance,
+    // novemberDistance: novemberDistance,
+    // decemberDistance: decemberDistance,
   };
 
   const getMonthlyActivities = (activities, month) => {

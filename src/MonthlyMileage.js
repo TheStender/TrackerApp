@@ -64,10 +64,19 @@ function MonthlyMileage(props){
       },
       {
         label: '2021',
-        data: [props.distances.januaryDistance.toFixed(2), props.distances.februaryDistance.toFixed(2), props.distances.marchDistance.toFixed(2), props.distances.aprilDistance.toFixed(2), props.distances.mayDistance.toFixed(2), props.distances.juneDistance.toFixed(2), props.distances.julyDistance.toFixed(2), props.distances.augustDistance.toFixed(2), props.distances.septemberDistance.toFixed(2), props.distances.octoberDistance.toFixed(2), props.distances.novemberDistance.toFixed(2), props.distances.decemberDistance.toFixed(2)],
+        data: [115.48,143.14,159.41,76,64.77,225.55,45.35,195.95,150.99,58.89,33.3,0],
         fill: false,
-        backgroundColor: 'rgb(154, 245, 64)',
-        borderColor: 'rgba(154, 245, 64, 0.2)',
+        backgroundColor: 'rgb(252, 196, 140)',
+        borderColor: 'rgba(252, 196, 140, 0.2)',
+      },
+      {
+        label: '2022',
+        data: [props.distances.januaryDistance.toFixed(2)
+          // props.distances.februaryDistance.toFixed(2), props.distances.marchDistance.toFixed(2), props.distances.aprilDistance.toFixed(2), props.distances.mayDistance.toFixed(2), props.distances.juneDistance.toFixed(2), props.distances.julyDistance.toFixed(2), props.distances.augustDistance.toFixed(2), props.distances.septemberDistance.toFixed(2), props.distances.octoberDistance.toFixed(2), props.distances.novemberDistance.toFixed(2), props.distances.decemberDistance.toFixed(2)
+        ],
+        fill: false,
+        backgroundColor: 'rgb(58, 247, 58)',
+        borderColor: 'rgba(58, 247, 58, 0.2)',
       },
     ],
   }
