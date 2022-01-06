@@ -19,7 +19,7 @@ function Stats(props) {
         <br />
         <br />
         <br />
-        <h3 className='text-center'>2021 Monthly Breakdown</h3>
+        <h3 className='text-center'>2022 Monthly Breakdown</h3>
         <Table striped bordered hover variant='dark'>
           <thead>
             <tr>
@@ -62,7 +62,9 @@ function Stats(props) {
             </tr>
             <tr>
               <td>September</td>
-              <td>TBD {/* {props.distances.septemberDistance.toFixed(2)} */}</td>
+              <td>
+                TBD {/* {props.distances.septemberDistance.toFixed(2)} */}
+              </td>
             </tr>
             <tr>
               <td>October</td>
