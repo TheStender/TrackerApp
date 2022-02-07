@@ -15,7 +15,7 @@ function App(props) {
   const [eDistance, setEDistance] = useState(0);
   const [virtualDistance, setVirtualDistance] = useState(0);
   const [januaryDistance, setJanuaryDistance] = useState(0);
-  // const [februaryDistance, setFebruaryDistance] = useState(0);
+  const [februaryDistance, setFebruaryDistance] = useState(0);
   // const [marchDistance, setMarchDistance] = useState(0);
   // const [aprilDistance, setAprilDistance] = useState(0);
   // const [mayDistance, setMayDistance] = useState(0);
@@ -64,17 +64,17 @@ function App(props) {
         setEDistance(calculateDistance(data, "EBikeRide"));
         setVirtualDistance(calculateDistance(data, "VirtualRide"));
         setJanuaryDistance(getMonthlyActivities(data, "2022-01"));
-        // setFebruaryDistance(getMonthlyActivities(data, "2021-02"));
-        // setMarchDistance(getMonthlyActivities(data, "2021-03"));
-        // setAprilDistance(getMonthlyActivities(data, "2021-04"));
-        // setMayDistance(getMonthlyActivities(data, "2021-05"));
-        // setJuneDistance(getMonthlyActivities(data, "2021-06"));
-        // setJulyDistance(getMonthlyActivities(data, "2021-07"));
-        // setAugustDistance(getMonthlyActivities(data, "2021-08"));
-        // setSeptemberDistance(getMonthlyActivities(data, "2021-09"));
-        // setOctoberDistance(getMonthlyActivities(data, "2021-10"));
-        // setNovemberDistance(getMonthlyActivities(data, "2021-11"));
-        // setDecemberDistance(getMonthlyActivities(data, "2021-12"));
+        setFebruaryDistance(getMonthlyActivities(data, "2022-02"));
+        // setMarchDistance(getMonthlyActivities(data, "2022-03"));
+        // setAprilDistance(getMonthlyActivities(data, "2022-04"));
+        // setMayDistance(getMonthlyActivities(data, "2022-05"));
+        // setJuneDistance(getMonthlyActivities(data, "2022-06"));
+        // setJulyDistance(getMonthlyActivities(data, "2022-07"));
+        // setAugustDistance(getMonthlyActivities(data, "2022-08"));
+        // setSeptemberDistance(getMonthlyActivities(data, "2022-09"));
+        // setOctoberDistance(getMonthlyActivities(data, "2022-10"));
+        // setNovemberDistance(getMonthlyActivities(data, "2022-11"));
+        // setDecemberDistance(getMonthlyActivities(data, "2022-12"));
       })
       .catch((e) => console.log(e));
   }
@@ -93,8 +93,8 @@ function App(props) {
     roadDistance: roadDistance,
     eDistance: eDistance,
     virtualDistance: virtualDistance,
-    januaryDistance: januaryDistance
-    // februaryDistance: februaryDistance,
+    januaryDistance: januaryDistance,
+    februaryDistance: februaryDistance
     // marchDistance: marchDistance,
     // aprilDistance: aprilDistance,
     // mayDistance: mayDistance,
