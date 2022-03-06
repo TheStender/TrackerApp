@@ -16,7 +16,7 @@ function App(props) {
   const [virtualDistance, setVirtualDistance] = useState(0);
   const [januaryDistance, setJanuaryDistance] = useState(0);
   const [februaryDistance, setFebruaryDistance] = useState(0);
-  // const [marchDistance, setMarchDistance] = useState(0);
+  const [marchDistance, setMarchDistance] = useState(0);
   // const [aprilDistance, setAprilDistance] = useState(0);
   // const [mayDistance, setMayDistance] = useState(0);
   // const [juneDistance, setJuneDistance] = useState(0);
@@ -65,7 +65,7 @@ function App(props) {
         setVirtualDistance(calculateDistance(data, "VirtualRide"));
         setJanuaryDistance(getMonthlyActivities(data, "2022-01"));
         setFebruaryDistance(getMonthlyActivities(data, "2022-02"));
-        // setMarchDistance(getMonthlyActivities(data, "2022-03"));
+        setMarchDistance(getMonthlyActivities(data, "2022-03"));
         // setAprilDistance(getMonthlyActivities(data, "2022-04"));
         // setMayDistance(getMonthlyActivities(data, "2022-05"));
         // setJuneDistance(getMonthlyActivities(data, "2022-06"));
@@ -94,8 +94,8 @@ function App(props) {
     eDistance: eDistance,
     virtualDistance: virtualDistance,
     januaryDistance: januaryDistance,
-    februaryDistance: februaryDistance
-    // marchDistance: marchDistance,
+    februaryDistance: februaryDistance,
+    marchDistance: marchDistance,
     // aprilDistance: aprilDistance,
     // mayDistance: mayDistance,
     // juneDistance: juneDistance,
