@@ -18,7 +18,7 @@ function App(props) {
   const [februaryDistance, setFebruaryDistance] = useState(0);
   const [marchDistance, setMarchDistance] = useState(0);
   const [aprilDistance, setAprilDistance] = useState(0);
-  // const [mayDistance, setMayDistance] = useState(0);
+  const [mayDistance, setMayDistance] = useState(0);
   // const [juneDistance, setJuneDistance] = useState(0);
   // const [julyDistance, setJulyDistance] = useState(0);
   // const [augustDistance, setAugustDistance] = useState(0);
@@ -67,7 +67,7 @@ function App(props) {
         setFebruaryDistance(getMonthlyActivities(data, "2022-02"));
         setMarchDistance(getMonthlyActivities(data, "2022-03"));
         setAprilDistance(getMonthlyActivities(data, "2022-04"));
-        // setMayDistance(getMonthlyActivities(data, "2022-05"));
+        setMayDistance(getMonthlyActivities(data, "2022-05"));
         // setJuneDistance(getMonthlyActivities(data, "2022-06"));
         // setJulyDistance(getMonthlyActivities(data, "2022-07"));
         // setAugustDistance(getMonthlyActivities(data, "2022-08"));
@@ -97,7 +97,7 @@ function App(props) {
     februaryDistance: februaryDistance,
     marchDistance: marchDistance,
     aprilDistance: aprilDistance,
-    // mayDistance: mayDistance,
+    mayDistance: mayDistance,
     // juneDistance: juneDistance,
     // julyDistance: julyDistance,
     // augustDistance: augustDistance,

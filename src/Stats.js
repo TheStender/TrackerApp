@@ -46,7 +46,7 @@ function Stats(props) {
             </tr>
             <tr>
               <td>May</td>
-              <td>TBD {/* {props.distances.mayDistance.toFixed(2)} */}</td>
+              <td>{props.distances.mayDistance.toFixed(2)}</td>
             </tr>
             <tr>
               <td>June</td>

@@ -72,7 +72,7 @@ function MonthlyMileage(props){
       {
         label: '2022',
         data: [props.distances.januaryDistance.toFixed(2), props.distances.februaryDistance.toFixed(2), props.distances.marchDistance.toFixed(2),
-          props.distances.aprilDistance.toFixed(2) //props.distances.mayDistance.toFixed(2), props.distances.juneDistance.toFixed(2), props.distances.julyDistance.toFixed(2), props.distances.augustDistance.toFixed(2), props.distances.septemberDistance.toFixed(2), props.distances.octoberDistance.toFixed(2), props.distances.novemberDistance.toFixed(2), props.distances.decemberDistance.toFixed(2)
+          props.distances.aprilDistance.toFixed(2), props.distances.mayDistance.toFixed(2) // props.distances.juneDistance.toFixed(2), props.distances.julyDistance.toFixed(2), props.distances.augustDistance.toFixed(2), props.distances.septemberDistance.toFixed(2), props.distances.octoberDistance.toFixed(2), props.distances.novemberDistance.toFixed(2), props.distances.decemberDistance.toFixed(2)
         ],
         fill: false,
         backgroundColor: 'rgb(58, 247, 58)',
