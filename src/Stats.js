@@ -50,7 +50,7 @@ function Stats(props) {
             </tr>
             <tr>
               <td>June</td>
-              <td>TBD {/* {props.distances.juneDistance.toFixed(2)} */}</td>
+              <td>{props.distances.juneDistance.toFixed(2)}</td>
             </tr>
             <tr>
               <td>July</td>

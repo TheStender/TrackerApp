@@ -7,7 +7,7 @@ function LineChart(props) {
   let marchTotal = februaryTotal + props.distances.marchDistance;
   let aprilTotal = marchTotal + props.distances.aprilDistance;
   let mayTotal = aprilTotal + props.distances.mayDistance;
-  // let juneTotal = mayTotal + props.distances.juneDistance;
+  let juneTotal = mayTotal + props.distances.juneDistance;
   // let julyTotal = juneTotal + props.distances.julyDistance;
   // let augustTotal = julyTotal + props.distances.augustDistance;
   // let septemberTotal = augustTotal + props.distances.septemberDistance;
@@ -102,7 +102,7 @@ function LineChart(props) {
           marchTotal.toFixed(2),
           aprilTotal.toFixed(2),
           mayTotal.toFixed(2),
-          // juneTotal.toFixed(2),
+          juneTotal.toFixed(2),
           // julyTotal.toFixed(2),
           // augustTotal.toFixed(2),
           // septemberTotal.toFixed(2),
