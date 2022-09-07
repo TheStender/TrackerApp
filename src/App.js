@@ -7,6 +7,7 @@ import Header from "./Header";
 import Stats from "./Stats";
 import Routes from "./Routes";
 import About from "./About";
+import { getElementError } from "@testing-library/react";
 
 function App(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +27,10 @@ function App(props) {
   // const [octoberDistance, setOctoberDistance] = useState(0);
   // const [novemberDistance, setNovemberDistance] = useState(0);
   // const [decemberDistance, setDecemberDistance] = useState(0);
+
+  const [roadElevation, setRoadElevation] = useState(0);
+  const [eElevation, setEElevation] = useState(0);
+  const [virtualElevation, setVirtualElevation] = useState(0);
 
   const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
   const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
@@ -75,6 +80,9 @@ function App(props) {
         // setOctoberDistance(getMonthlyActivities(data, "2022-10"));
         // setNovemberDistance(getMonthlyActivities(data, "2022-11"));
         // setDecemberDistance(getMonthlyActivities(data, "2022-12"));
+        setRoadElevation(getElevationGain(data, "Ride"));
+        setEElevation(getElevationGain(data, "EBikeRide"));
+        setVirtualElevation(getElevationGain(data, "VirtualRide"));
       })
       .catch((e) => console.log(e));
   }
@@ -87,6 +95,16 @@ function App(props) {
       }
     });
     return (distanceTotal / 1609).toFixed(2);
+  };
+
+  let getElevationGain = (activities, type) => {
+    let totalElevation = 0;
+    activities.forEach((ride) => {
+      if (ride.type === type) {
+        totalElevation = totalElevation + ride.total_elevation_gain;
+      }
+    });
+    return (totalElevation * 3.281).toFixed(0);
   };
 
   let distances = {
@@ -107,6 +125,12 @@ function App(props) {
     // decemberDistance: decemberDistance,
   };
 
+  let elevation = {
+    roadElevation: roadElevation,
+    eElevation: eElevation,
+    virtualElevation: virtualElevation,
+  };
+
   const getMonthlyActivities = (activities, month) => {
     let distanceTotal = 0;
     activities.forEach((ride) => {
@@ -125,7 +149,7 @@ function App(props) {
           <Home distances={distances} />
         </Route>
         <Route path='/stats'>
-          <Stats distances={distances} />
+          <Stats distances={distances} elevation={elevation} />
         </Route>
         <Route path='/routes' component={Routes} />
         <Route path='/about' component={About} />

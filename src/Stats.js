@@ -7,6 +7,14 @@ function Stats(props) {
     <div className='Stats'>
       <div className='container-fluid'>
         <h1 className='text-center'>Stats - Coming Soon!</h1>
+        <h3 className='text-center'>
+          {(
+            parseFloat(props.elevation.roadElevation) +
+            parseFloat(props.elevation.eElevation) +
+            parseFloat(props.elevation.virtualElevation)
+          ).toFixed(0)}{" "}
+          Feet Climbed
+        </h3>
         <br />
         <h3 className='text-center'>Mileage per Month</h3>
         <div className='row'>
@@ -62,7 +70,7 @@ function Stats(props) {
             </tr>
             <tr>
               <td>September</td>
-              <td>{props.distances.septemberDistance.toFixed(2)}}</td>
+              <td>{props.distances.septemberDistance.toFixed(2)}</td>
             </tr>
             <tr>
               <td>October</td>
