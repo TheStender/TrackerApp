@@ -10,7 +10,7 @@ function LineChart(props) {
   let juneTotal = mayTotal + props.distances.juneDistance;
   let julyTotal = juneTotal + props.distances.julyDistance;
   let augustTotal = julyTotal + props.distances.augustDistance;
-  // let septemberTotal = augustTotal + props.distances.septemberDistance;
+  let septemberTotal = augustTotal + props.distances.septemberDistance;
   // let octoberTotal = septemberTotal + props.distances.octoberDistance;
   // let novemberTotal = octoberTotal + props.distances.novemberDistance;
   // let decemberTotal = novemberTotal + props.distances.decemberDistance;
@@ -89,10 +89,13 @@ function LineChart(props) {
       },
       {
         label: "2021",
-        data: [115.48,258.62,418.03,494.03,558.8,784.35,829.7,1025.65,1176.64,1235.53,1268.83,1268.83],
+        data: [
+          115.48, 258.62, 418.03, 494.03, 558.8, 784.35, 829.7, 1025.65,
+          1176.64, 1235.53, 1268.83, 1268.83,
+        ],
         fill: false,
-        backgroundColor: 'rgb(252, 196, 140)',
-        borderColor: 'rgba(252, 196, 140, 0.2)',
+        backgroundColor: "rgb(252, 196, 140)",
+        borderColor: "rgba(252, 196, 140, 0.2)",
       },
       {
         label: "2022",
@@ -105,14 +108,14 @@ function LineChart(props) {
           juneTotal.toFixed(2),
           julyTotal.toFixed(2),
           augustTotal.toFixed(2),
-          // septemberTotal.toFixed(2),
+          septemberTotal.toFixed(2),
           // octoberTotal.toFixed(2),
           // novemberTotal.toFixed(2),
           // decemberTotal.toFixed(2),
         ],
         fill: false,
-        backgroundColor: 'rgb(58, 247, 58)',
-        borderColor: 'rgba(58, 247, 58, 0.2)',
+        backgroundColor: "rgb(58, 247, 58)",
+        borderColor: "rgba(58, 247, 58, 0.2)",
       },
     ],
   };
