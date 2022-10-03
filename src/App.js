@@ -24,7 +24,7 @@ function App(props) {
   const [julyDistance, setJulyDistance] = useState(0);
   const [augustDistance, setAugustDistance] = useState(0);
   const [septemberDistance, setSeptemberDistance] = useState(0);
-  // const [octoberDistance, setOctoberDistance] = useState(0);
+  const [octoberDistance, setOctoberDistance] = useState(0);
   // const [novemberDistance, setNovemberDistance] = useState(0);
   // const [decemberDistance, setDecemberDistance] = useState(0);
 
@@ -77,7 +77,7 @@ function App(props) {
         setJulyDistance(getMonthlyActivities(data, "2022-07"));
         setAugustDistance(getMonthlyActivities(data, "2022-08"));
         setSeptemberDistance(getMonthlyActivities(data, "2022-09"));
-        // setOctoberDistance(getMonthlyActivities(data, "2022-10"));
+        setOctoberDistance(getMonthlyActivities(data, "2022-10"));
         // setNovemberDistance(getMonthlyActivities(data, "2022-11"));
         // setDecemberDistance(getMonthlyActivities(data, "2022-12"));
         setRoadElevation(getElevationGain(data, "Ride"));
@@ -120,7 +120,7 @@ function App(props) {
     julyDistance: julyDistance,
     augustDistance: augustDistance,
     septemberDistance: septemberDistance,
-    // octoberDistance: octoberDistance,
+    octoberDistance: octoberDistance,
     // novemberDistance: novemberDistance,
     // decemberDistance: decemberDistance,
   };
