@@ -25,8 +25,8 @@ function App(props) {
   const [augustDistance, setAugustDistance] = useState(0);
   const [septemberDistance, setSeptemberDistance] = useState(0);
   const [octoberDistance, setOctoberDistance] = useState(0);
-  // const [novemberDistance, setNovemberDistance] = useState(0);
-  // const [decemberDistance, setDecemberDistance] = useState(0);
+  const [novemberDistance, setNovemberDistance] = useState(0);
+  const [decemberDistance, setDecemberDistance] = useState(0);
 
   const [roadElevation, setRoadElevation] = useState(0);
   const [eElevation, setEElevation] = useState(0);
@@ -78,8 +78,8 @@ function App(props) {
         setAugustDistance(getMonthlyActivities(data, "2022-08"));
         setSeptemberDistance(getMonthlyActivities(data, "2022-09"));
         setOctoberDistance(getMonthlyActivities(data, "2022-10"));
-        // setNovemberDistance(getMonthlyActivities(data, "2022-11"));
-        // setDecemberDistance(getMonthlyActivities(data, "2022-12"));
+        setNovemberDistance(getMonthlyActivities(data, "2022-11"));
+        setDecemberDistance(getMonthlyActivities(data, "2022-12"));
         setRoadElevation(getElevationGain(data, "Ride"));
         setEElevation(getElevationGain(data, "EBikeRide"));
         setVirtualElevation(getElevationGain(data, "VirtualRide"));
@@ -121,8 +121,8 @@ function App(props) {
     augustDistance: augustDistance,
     septemberDistance: septemberDistance,
     octoberDistance: octoberDistance,
-    // novemberDistance: novemberDistance,
-    // decemberDistance: decemberDistance,
+    novemberDistance: novemberDistance,
+    decemberDistance: decemberDistance,
   };
 
   let elevation = {
