@@ -2,18 +2,33 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 
 function LineChart(props) {
-  let januaryTotal = props.distances.januaryDistance;
-  let februaryTotal = januaryTotal + props.distances.februaryDistance;
-  let marchTotal = februaryTotal + props.distances.marchDistance;
-  let aprilTotal = marchTotal + props.distances.aprilDistance;
-  let mayTotal = aprilTotal + props.distances.mayDistance;
-  let juneTotal = mayTotal + props.distances.juneDistance;
-  let julyTotal = juneTotal + props.distances.julyDistance;
-  let augustTotal = julyTotal + props.distances.augustDistance;
-  let septemberTotal = augustTotal + props.distances.septemberDistance;
-  let octoberTotal = septemberTotal + props.distances.octoberDistance;
-  let novemberTotal = octoberTotal + props.distances.novemberDistance;
-  let decemberTotal = novemberTotal + props.distances.decemberDistance;
+  let januaryTotal = Number(props.distances.januaryDistance).toFixed(2);
+  let februaryTotal = Number(januaryTotal + props.distances.februaryDistance).toFixed(2);
+  let marchTotal = Number(februaryTotal + props.distances.marchDistance).toFixed(2);
+  let aprilTotal = Number(marchTotal + props.distances.aprilDistance).toFixed(2);
+  let mayTotal = Number(aprilTotal + props.distances.mayDistance).toFixed(2);
+  let juneTotal = Number(mayTotal + props.distances.juneDistance).toFixed(2);
+  let julyTotal = Number(juneTotal + props.distances.julyDistance).toFixed(2);
+  let augustTotal = Number(julyTotal + props.distances.augustDistance).toFixed(2);
+  let septemberTotal = Number(augustTotal + props.distances.septemberDistance).toFixed(2);
+  let octoberTotal = Number(septemberTotal + props.distances.octoberDistance).toFixed(2);
+  let novemberTotal = Number(octoberTotal + props.distances.novemberDistance).toFixed(2);
+  let decemberTotal = Number(novemberTotal + props.distances.decemberDistance).toFixed(2);
+
+  const d = new Date();
+  let currentMonth = d.getMonth();
+
+  if (februaryTotal < 0.01 && currentMonth < 1) februaryTotal = null;
+  if (marchTotal < 0.01 && currentMonth < 2) marchTotal = null;
+  if (aprilTotal < 0.01 && currentMonth < 3) aprilTotal = null;
+  if (mayTotal < 0.01 && currentMonth < 4) mayTotal = null;
+  if (juneTotal < 0.01 && currentMonth < 5) juneTotal = null;
+  if (julyTotal < 0.01 && currentMonth < 6) julyTotal = null;
+  if (augustTotal < 0.01 && currentMonth < 7) augustTotal = null;
+  if (septemberTotal < 0.01 && currentMonth < 8) septemberTotal = null;
+  if (octoberTotal < 0.01 && currentMonth < 9) octoberTotal = null;
+  if (novemberTotal < 0.01 && currentMonth < 10) novemberTotal = null;
+  if (decemberTotal < 0.01 && currentMonth < 11) decemberTotal = null;
 
   const data = {
     labels: [
@@ -100,22 +115,32 @@ function LineChart(props) {
       {
         label: "2022",
         data: [
-          januaryTotal.toFixed(2),
-          februaryTotal.toFixed(2),
-          marchTotal.toFixed(2),
-          aprilTotal.toFixed(2),
-          mayTotal.toFixed(2),
-          juneTotal.toFixed(2),
-          julyTotal.toFixed(2),
-          augustTotal.toFixed(2),
-          septemberTotal.toFixed(2),
-          octoberTotal.toFixed(2),
-          novemberTotal.toFixed(2),
-          decemberTotal.toFixed(2),
+          204.55, 250.22, 301.71, 364.89, 454.49, 561.8, 732.23, 847.55, 899.05,
+          926.85, 945.71, 972.48,
         ],
         fill: false,
         backgroundColor: "rgb(58, 247, 58)",
         borderColor: "rgba(58, 247, 58, 0.2)",
+      },
+      {
+        label: "2023",
+        data: [
+          januaryTotal,
+          februaryTotal,
+          marchTotal,
+          aprilTotal,
+          mayTotal,
+          juneTotal,
+          julyTotal,
+          augustTotal,
+          septemberTotal,
+          octoberTotal,
+          novemberTotal,
+          decemberTotal,
+        ],
+        fill: false,
+        backgroundColor: "rgb(220, 171, 238)",
+        borderColor: "rgba(220, 171, 238, 0.2)",
       },
     ],
   };

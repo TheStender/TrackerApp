@@ -36,7 +36,7 @@ function App(props) {
   const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const REACT_APP_REFRESH_TOKEN = process.env.REACT_APP_REFRESH_TOKEN;
 
-  let epochString = 1640995200;
+  let epochString = 1672531200;
 
   // Strava credentials
   let clientID = REACT_APP_CLIENT_ID;
@@ -68,18 +68,18 @@ function App(props) {
         setRoadDistance(calculateDistance(data, "Ride"));
         setEDistance(calculateDistance(data, "EBikeRide"));
         setVirtualDistance(calculateDistance(data, "VirtualRide"));
-        setJanuaryDistance(getMonthlyActivities(data, "2022-01"));
-        setFebruaryDistance(getMonthlyActivities(data, "2022-02"));
-        setMarchDistance(getMonthlyActivities(data, "2022-03"));
-        setAprilDistance(getMonthlyActivities(data, "2022-04"));
-        setMayDistance(getMonthlyActivities(data, "2022-05"));
-        setJuneDistance(getMonthlyActivities(data, "2022-06"));
-        setJulyDistance(getMonthlyActivities(data, "2022-07"));
-        setAugustDistance(getMonthlyActivities(data, "2022-08"));
-        setSeptemberDistance(getMonthlyActivities(data, "2022-09"));
-        setOctoberDistance(getMonthlyActivities(data, "2022-10"));
-        setNovemberDistance(getMonthlyActivities(data, "2022-11"));
-        setDecemberDistance(getMonthlyActivities(data, "2022-12"));
+        setJanuaryDistance(getMonthlyActivities(data, "2023-01"));
+        setFebruaryDistance(getMonthlyActivities(data, "2023-02"));
+        setMarchDistance(getMonthlyActivities(data, "2023-03"));
+        setAprilDistance(getMonthlyActivities(data, "2023-04"));
+        setMayDistance(getMonthlyActivities(data, "2023-05"));
+        setJuneDistance(getMonthlyActivities(data, "2023-06"));
+        setJulyDistance(getMonthlyActivities(data, "2023-07"));
+        setAugustDistance(getMonthlyActivities(data, "2023-08"));
+        setSeptemberDistance(getMonthlyActivities(data, "2023-09"));
+        setOctoberDistance(getMonthlyActivities(data, "2023-10"));
+        setNovemberDistance(getMonthlyActivities(data, "2023-11"));
+        setDecemberDistance(getMonthlyActivities(data, "2023-12"));
         setRoadElevation(getElevationGain(data, "Ride"));
         setEElevation(getElevationGain(data, "EBikeRide"));
         setVirtualElevation(getElevationGain(data, "VirtualRide"));

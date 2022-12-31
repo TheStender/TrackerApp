@@ -2,6 +2,35 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 
 function MonthlyMileage(props) {
+
+  let januaryDistance = props.distances.januaryDistance.toFixed(2);
+  let februaryDistance = props.distances.februaryDistance.toFixed(2);
+  let marchDistance = props.distances.marchDistance.toFixed(2);
+  let aprilDistance = props.distances.aprilDistance.toFixed(2);
+  let mayDistance = props.distances.mayDistance.toFixed(2);
+  let juneDistance = props.distances.juneDistance.toFixed(2);
+  let julyDistance = props.distances.julyDistance.toFixed(2);
+  let augustDistance = props.distances.augustDistance.toFixed(2);
+  let septemberDistance = props.distances.septemberDistance.toFixed(2);
+  let octoberDistance = props.distances.octoberDistance.toFixed(2);
+  let novemberDistance = props.distances.novemberDistance.toFixed(2);
+  let decemberDistance = props.distances.decemberDistance.toFixed(2);
+
+  const d = new Date();
+  let currentMonth = d.getMonth();
+
+  if (februaryDistance < 0.01 && currentMonth < 1) februaryDistance = null;
+  if (marchDistance < 0.01 && currentMonth < 2) marchDistance = null;
+  if (aprilDistance < 0.01 && currentMonth < 3) aprilDistance = null;
+  if (mayDistance < 0.01 && currentMonth < 4) mayDistance = null;
+  if (juneDistance < 0.01 && currentMonth < 5) juneDistance = null;
+  if (julyDistance < 0.01 && currentMonth < 6) julyDistance = null;
+  if (augustDistance < 0.01 && currentMonth < 7) augustDistance = null;
+  if (septemberDistance < 0.01 && currentMonth < 8) septemberDistance = null;
+  if (octoberDistance < 0.01 && currentMonth < 9) octoberDistance = null;
+  if (novemberDistance < 0.01 && currentMonth < 10) novemberDistance = null;
+  if (decemberDistance < 0.01 && currentMonth < 11) decemberDistance = null;
+
   const data = {
     labels: [
       "Jan",
@@ -87,17 +116,31 @@ function MonthlyMileage(props) {
       {
         label: "2022",
         data: [
-          props.distances.januaryDistance.toFixed(2),
-          props.distances.februaryDistance.toFixed(2),
-          props.distances.marchDistance.toFixed(2),
-          props.distances.aprilDistance.toFixed(2),
-          props.distances.mayDistance.toFixed(2),
-          props.distances.juneDistance.toFixed(2),
-          props.distances.julyDistance.toFixed(2), props.distances.augustDistance.toFixed(2), props.distances.septemberDistance.toFixed(2), props.distances.octoberDistance.toFixed(2), props.distances.novemberDistance.toFixed(2), props.distances.decemberDistance.toFixed(2)
+          204.55, 45.67, 51.49, 63.18, 89.6, 107.31, 170.43, 115.32, 51.5, 27.8, 18.86, 26.77
         ],
         fill: false,
         backgroundColor: "rgb(58, 247, 58)",
         borderColor: "rgba(58, 247, 58, 0.2)",
+      },
+      {
+        label: "2023",
+        data: [
+          januaryDistance,
+          februaryDistance,
+          marchDistance,
+          aprilDistance,
+          mayDistance,
+          juneDistance,
+          julyDistance, 
+          augustDistance, 
+          septemberDistance, 
+          octoberDistance, 
+          novemberDistance, 
+          decemberDistance
+        ],
+        fill: false,
+        backgroundColor: "rgb(220, 171, 238)",
+        borderColor: "rgba(220, 171, 238, 0.2)",
       },
     ],
   };
