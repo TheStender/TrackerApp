@@ -18,17 +18,17 @@ function LineChart(props) {
   const d = new Date();
   let currentMonth = d.getMonth();
 
-  if (februaryTotal < 0.01 && currentMonth < 1) februaryTotal = null;
-  if (marchTotal < 0.01 && currentMonth < 2) marchTotal = null;
-  if (aprilTotal < 0.01 && currentMonth < 3) aprilTotal = null;
-  if (mayTotal < 0.01 && currentMonth < 4) mayTotal = null;
-  if (juneTotal < 0.01 && currentMonth < 5) juneTotal = null;
-  if (julyTotal < 0.01 && currentMonth < 6) julyTotal = null;
-  if (augustTotal < 0.01 && currentMonth < 7) augustTotal = null;
-  if (septemberTotal < 0.01 && currentMonth < 8) septemberTotal = null;
-  if (octoberTotal < 0.01 && currentMonth < 9) octoberTotal = null;
-  if (novemberTotal < 0.01 && currentMonth < 10) novemberTotal = null;
-  if (decemberTotal < 0.01 && currentMonth < 11) decemberTotal = null;
+  if (currentMonth < 1) februaryTotal = null;
+  if (currentMonth < 2) marchTotal = null;
+  if (currentMonth < 3) aprilTotal = null;
+  if (currentMonth < 4) mayTotal = null;
+  if (currentMonth < 5) juneTotal = null;
+  if (currentMonth < 6) julyTotal = null;
+  if (currentMonth < 7) augustTotal = null;
+  if (currentMonth < 8) septemberTotal = null;
+  if (currentMonth < 9) octoberTotal = null;
+  if (currentMonth < 10) novemberTotal = null;
+  if (currentMonth < 11) decemberTotal = null;
 
   const data = {
     labels: [
