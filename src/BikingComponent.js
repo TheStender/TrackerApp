@@ -3,8 +3,8 @@ import CardioTemplate from "./CardioTemplate";
 
 function Exercise(props) {
   let today = new Date();
-  let endOfYear = new Date("12/31/2023");
-  let startOfYear = new Date("1/1/2023");
+  let endOfYear = new Date(new Date().getFullYear(), 11, 31);
+  let startOfYear = new Date(new Date().getFullYear(), 0, 1);
   let timeRemaining = Math.abs(endOfYear - today);
   let timePassed = Math.abs(today - startOfYear);
   let daysRemaining = Math.ceil(timeRemaining / (1000 * 3600 * 24));
