@@ -8,7 +8,7 @@ function CardioTemplate(props) {
     let percentComplete = ((currentMileage / totalMileage) * 100).toFixed(2);
     let daysRemaining = props.daysRemaining;
     let daysPassed = props.daysPassed;
-    let startOfYear = new Date('1/1/2023');
+    let startOfYear = new Date(new Date().getFullYear(), 0, 1);
     let daysUntilCompletion = daysPassed + ((totalMileage-currentMileage) / (currentMileage / daysPassed));
     let dateOfCompletion = addDays(startOfYear, daysUntilCompletion);
     let mm = dateOfCompletion.getMonth() + 1;

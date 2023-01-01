@@ -4,7 +4,7 @@ import CardioTemplate from './CardioTemplate';
 function WalkingComponent(props) {
 
   let today = new Date();
-  let endOfYear = new Date('12/31/2023');
+  let endOfYear = new Date(new Date().getFullYear(), 11, 31);
   let timeRemaining = Math.abs(endOfYear - today);
   let daysRemaining = Math.ceil(timeRemaining / (1000 * 3600 * 24));
 
