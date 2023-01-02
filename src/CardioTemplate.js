@@ -27,16 +27,19 @@ function CardioTemplate(props) {
         <h1 className="text-center">{props.CardioType}</h1>
         <div className="container-fluid">
           <div className="row">
+            
             <div className="col">
-                <p>Current Mileage: { currentMileage } / {totalMileage}</p>
+              <Chart percentComplete={ percentComplete }/>
+              <p className="text-center">Estimated Completion: { finalDate }</p>
+            </div>
+          </div>
+          <div className="row">
+          <div className="col text-center">
+                <p>Current Mileage: { currentMileage }</p>
                 <p>Mileage Remaining: { (totalMileage - currentMileage).toFixed(2) }</p>
                 <p>Miles needed per day: {((totalMileage - currentMileage) / daysRemaining).toFixed(2) }</p>
                 <p>Miles needed per week: { (((totalMileage - currentMileage)  / daysRemaining) * 7).toFixed(2) }</p>
                 <p>Current Average per day: { (currentMileage / daysPassed).toFixed(2) }</p>
-            </div>
-            <div className="col">
-              <Chart percentComplete={ percentComplete }/>
-              <p className="text-center">Estimated Completion: { finalDate }</p>
             </div>
           </div>
         </div>
