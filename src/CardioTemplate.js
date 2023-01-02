@@ -16,6 +16,9 @@ function CardioTemplate(props) {
     let yy = dateOfCompletion.getFullYear();
     let finalDate = `${mm}/${dd}/${yy}`;
 
+    if (finalDate === 'NaN/NaN/NaN')
+      finalDate = 'Never'
+
     function addDays(date, days) {
       let result = new Date(date);
       result.setDate(result.getDate() + days)
@@ -27,7 +30,6 @@ function CardioTemplate(props) {
         <h1 className="text-center">{props.CardioType}</h1>
         <div className="container-fluid">
           <div className="row">
-            
             <div className="col">
               <Chart percentComplete={ percentComplete }/>
               <p className="text-center">Estimated Completion: { finalDate }</p>
