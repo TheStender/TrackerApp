@@ -7,7 +7,6 @@ import Header from "./Header";
 import Stats from "./Stats";
 import Routes from "./Routes";
 import About from "./About";
-import { getElementError } from "@testing-library/react";
 
 function App(props) {
   const [isLoading, setIsLoading] = useState(true);

@@ -2,18 +2,18 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 
 function LineChart(props) {
-  let januaryTotal = Number(props.distances.januaryDistance).toFixed(2);
-  let februaryTotal = Number(januaryTotal + props.distances.februaryDistance).toFixed(2);
-  let marchTotal = Number(februaryTotal + props.distances.marchDistance).toFixed(2);
-  let aprilTotal = Number(marchTotal + props.distances.aprilDistance).toFixed(2);
-  let mayTotal = Number(aprilTotal + props.distances.mayDistance).toFixed(2);
-  let juneTotal = Number(mayTotal + props.distances.juneDistance).toFixed(2);
-  let julyTotal = Number(juneTotal + props.distances.julyDistance).toFixed(2);
-  let augustTotal = Number(julyTotal + props.distances.augustDistance).toFixed(2);
-  let septemberTotal = Number(augustTotal + props.distances.septemberDistance).toFixed(2);
-  let octoberTotal = Number(septemberTotal + props.distances.octoberDistance).toFixed(2);
-  let novemberTotal = Number(octoberTotal + props.distances.novemberDistance).toFixed(2);
-  let decemberTotal = Number(novemberTotal + props.distances.decemberDistance).toFixed(2);
+  let januaryTotal = Number(props.distances.januaryDistance.toFixed(2));
+  let februaryTotal = Number(januaryTotal) + Number(props.distances.februaryDistance.toFixed(2));
+  let marchTotal = Number(februaryTotal) + Number(props.distances.marchDistance.toFixed(2));
+  let aprilTotal = Number(marchTotal) + Number(props.distances.aprilDistance.toFixed(2));
+  let mayTotal = Number(aprilTotal) + Number(props.distances.mayDistance.toFixed(2));
+  let juneTotal = Number(mayTotal) + Number(props.distances.juneDistance.toFixed(2));
+  let julyTotal = Number(juneTotal) + Number(props.distances.julyDistance.toFixed(2));
+  let augustTotal = Number(julyTotal) + Number(props.distances.augustDistance.toFixed(2));
+  let septemberTotal = Number(augustTotal) + Number(props.distances.septemberDistance.toFixed(2));
+  let octoberTotal = Number(septemberTotal) + Number(props.distances.octoberDistance.toFixed(2));
+  let novemberTotal = Number(octoberTotal) + Number(props.distances.novemberDistance.toFixed(2));
+  let decemberTotal = Number(novemberTotal) + Number(props.distances.decemberDistance.toFixed(2));
 
   const d = new Date();
   let currentMonth = d.getMonth();
