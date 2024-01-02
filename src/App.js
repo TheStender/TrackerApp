@@ -35,7 +35,7 @@ function App(props) {
   const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const REACT_APP_REFRESH_TOKEN = process.env.REACT_APP_REFRESH_TOKEN;
 
-  let epochString = 1672531200;
+  let epochString = 1704067260;
 
   // Strava credentials
   let clientID = REACT_APP_CLIENT_ID;

@@ -2,7 +2,6 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 
 function MonthlyMileage(props) {
-
   let januaryDistance = props.distances.januaryDistance.toFixed(2);
   let februaryDistance = props.distances.februaryDistance.toFixed(2);
   let marchDistance = props.distances.marchDistance.toFixed(2);
@@ -116,7 +115,8 @@ function MonthlyMileage(props) {
       {
         label: "2022",
         data: [
-          204.55, 45.67, 51.49, 63.18, 89.6, 107.31, 170.43, 115.32, 51.5, 27.8, 18.86, 26.77
+          204.55, 45.67, 51.49, 63.18, 89.6, 107.31, 170.43, 115.32, 51.5, 27.8,
+          18.86, 26.77,
         ],
         fill: false,
         backgroundColor: "rgb(58, 247, 58)",
@@ -124,6 +124,13 @@ function MonthlyMileage(props) {
       },
       {
         label: "2023",
+        data: [131, 115, 5, 58, 172, 128, 56, 16, 7.77, 18, 37, 0],
+        fill: false,
+        backgroundColor: "rgb(220, 171, 238)",
+        borderColor: "rgba(220, 171, 238, 0.2)",
+      },
+      {
+        label: "2024",
         data: [
           januaryDistance,
           februaryDistance,
@@ -131,16 +138,16 @@ function MonthlyMileage(props) {
           aprilDistance,
           mayDistance,
           juneDistance,
-          julyDistance, 
-          augustDistance, 
-          septemberDistance, 
-          octoberDistance, 
-          novemberDistance, 
-          decemberDistance
+          julyDistance,
+          augustDistance,
+          septemberDistance,
+          octoberDistance,
+          novemberDistance,
+          decemberDistance,
         ],
         fill: false,
-        backgroundColor: "rgb(220, 171, 238)",
-        borderColor: "rgba(220, 171, 238, 0.2)",
+        backgroundColor: "rgb(249, 252, 49)",
+        borderColor: "rgba(249, 252, 49, 0.2)",
       },
     ],
   };

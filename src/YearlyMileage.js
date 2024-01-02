@@ -3,17 +3,28 @@ import { Line } from "react-chartjs-2";
 
 function LineChart(props) {
   let januaryTotal = Number(props.distances.januaryDistance.toFixed(2));
-  let februaryTotal = Number(januaryTotal) + Number(props.distances.februaryDistance.toFixed(2));
-  let marchTotal = Number(februaryTotal) + Number(props.distances.marchDistance.toFixed(2));
-  let aprilTotal = Number(marchTotal) + Number(props.distances.aprilDistance.toFixed(2));
-  let mayTotal = Number(aprilTotal) + Number(props.distances.mayDistance.toFixed(2));
-  let juneTotal = Number(mayTotal) + Number(props.distances.juneDistance.toFixed(2));
-  let julyTotal = Number(juneTotal) + Number(props.distances.julyDistance.toFixed(2));
-  let augustTotal = Number(julyTotal) + Number(props.distances.augustDistance.toFixed(2));
-  let septemberTotal = Number(augustTotal) + Number(props.distances.septemberDistance.toFixed(2));
-  let octoberTotal = Number(septemberTotal) + Number(props.distances.octoberDistance.toFixed(2));
-  let novemberTotal = Number(octoberTotal) + Number(props.distances.novemberDistance.toFixed(2));
-  let decemberTotal = Number(novemberTotal) + Number(props.distances.decemberDistance.toFixed(2));
+  let februaryTotal =
+    Number(januaryTotal) + Number(props.distances.februaryDistance.toFixed(2));
+  let marchTotal =
+    Number(februaryTotal) + Number(props.distances.marchDistance.toFixed(2));
+  let aprilTotal =
+    Number(marchTotal) + Number(props.distances.aprilDistance.toFixed(2));
+  let mayTotal =
+    Number(aprilTotal) + Number(props.distances.mayDistance.toFixed(2));
+  let juneTotal =
+    Number(mayTotal) + Number(props.distances.juneDistance.toFixed(2));
+  let julyTotal =
+    Number(juneTotal) + Number(props.distances.julyDistance.toFixed(2));
+  let augustTotal =
+    Number(julyTotal) + Number(props.distances.augustDistance.toFixed(2));
+  let septemberTotal =
+    Number(augustTotal) + Number(props.distances.septemberDistance.toFixed(2));
+  let octoberTotal =
+    Number(septemberTotal) + Number(props.distances.octoberDistance.toFixed(2));
+  let novemberTotal =
+    Number(octoberTotal) + Number(props.distances.novemberDistance.toFixed(2));
+  let decemberTotal =
+    Number(novemberTotal) + Number(props.distances.decemberDistance.toFixed(2));
 
   const d = new Date();
   let currentMonth = d.getMonth();
@@ -124,6 +135,13 @@ function LineChart(props) {
       },
       {
         label: "2023",
+        data: [131, 115, 5, 58, 172, 128, 56, 16, 7.77, 18, 37, 0],
+        fill: false,
+        backgroundColor: "rgb(220, 171, 238",
+        borderColor: "rgba(220, 171, 238, 0.2)",
+      },
+      {
+        label: "2024",
         data: [
           januaryTotal,
           februaryTotal,
@@ -139,8 +157,8 @@ function LineChart(props) {
           decemberTotal,
         ],
         fill: false,
-        backgroundColor: "rgb(220, 171, 238)",
-        borderColor: "rgba(220, 171, 238, 0.2)",
+        backgroundColor: "rgb(249, 252, 49)",
+        borderColor: "rgba(249, 252, 49, 0.2)",
       },
     ],
   };
