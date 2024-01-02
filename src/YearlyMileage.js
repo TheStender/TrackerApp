@@ -135,7 +135,7 @@ function LineChart(props) {
       },
       {
         label: "2023",
-        data: [131, 115, 5, 58, 172, 128, 56, 16, 7.77, 18, 37, 0],
+        data: [131, 246, 251, 309, 481, 609, 665, 681, 689, 707, 744, 744],
         fill: false,
         backgroundColor: "rgb(220, 171, 238",
         borderColor: "rgba(220, 171, 238, 0.2)",
