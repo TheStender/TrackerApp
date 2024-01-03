@@ -6,7 +6,6 @@ function Stats(props) {
   return (
     <div className='Stats'>
       <div className='container-fluid'>
-        <h1 className='text-center'>Stats - Coming Soon!</h1>
         <h3 className='text-center'>
           {(
             parseFloat(props.elevation.roadElevation) +

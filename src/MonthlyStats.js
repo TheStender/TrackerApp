@@ -35,7 +35,7 @@ function MonthlyStats(props) {
           <tr>
             <th>Month</th>
             <th>Mileage</th>
-            <th>Monthly Average</th>
+            <th className='w-25'>Monthly Average</th>
           </tr>
         </thead>
         <tbody>
