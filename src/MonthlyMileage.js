@@ -131,6 +131,13 @@ function MonthlyMileage(props) {
       },
       {
         label: "2024",
+        data: [59.87, 21.17, 0, 57.03, 91.95, 79.53, 227.09, 26.6, 71.53, 27.19, 0, 7.51],
+        fill: false,
+        backgroundColor: "rgb(249, 252, 49)",
+        borderColor: "rgba(249, 252, 49, 0.2)",
+      },
+      {
+        label: "2025",
         data: [
           januaryDistance,
           februaryDistance,
@@ -146,8 +153,8 @@ function MonthlyMileage(props) {
           decemberDistance,
         ],
         fill: false,
-        backgroundColor: "rgb(249, 252, 49)",
-        borderColor: "rgba(249, 252, 49, 0.2)",
+        backgroundColor: "rgb(242, 136, 161)",
+        borderColor: "rgba(242, 136, 161, 0.2)",
       },
     ],
   };

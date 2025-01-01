@@ -137,11 +137,18 @@ function LineChart(props) {
         label: "2023",
         data: [131, 246, 251, 309, 481, 609, 665, 681, 689, 707, 744, 744],
         fill: false,
-        backgroundColor: "rgb(220, 171, 238",
+        backgroundColor: "rgb(220, 171, 238)",
         borderColor: "rgba(220, 171, 238, 0.2)",
       },
       {
         label: "2024",
+        data: [59.87, 81.04, 81.04, 138.07, 230.02, 309.55, 536.64, 563.24, 634.77, 661.96, 661.96, 669.47],
+        fill: false,
+        backgroundColor: "rgb(249, 252, 49)",
+        borderColor: "rgba(249, 252, 49, 0.2)",
+      },
+      {
+        label: "2025",
         data: [
           januaryTotal,
           februaryTotal,
@@ -157,8 +164,8 @@ function LineChart(props) {
           decemberTotal,
         ],
         fill: false,
-        backgroundColor: "rgb(249, 252, 49)",
-        borderColor: "rgba(249, 252, 49, 0.2)",
+        backgroundColor: "rgb(242, 136, 161)",
+        borderColor: "rgba(242, 136, 161, 0.2)",
       },
     ],
   };
